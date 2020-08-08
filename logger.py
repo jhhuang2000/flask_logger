@@ -32,6 +32,7 @@ def index():
     languages = str(request.accept_languages)
     mimetypes = str(request.accept_mimetypes)
     user_agent = str(request.headers.get('User-Agent'))
+    headers = str(request.headers)
     connection = str(re.findall(r"Connection: .*\n",headers))
     if len(connection) > 10:
         connection = connection[14:-6]
